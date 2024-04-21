@@ -11,8 +11,8 @@ import cookiesMiddleware from './src/middleware/cookies_middleware.mjs';
 dotenv.config();
 const app = express();
 app.use(cors({
+    origin: "http://localhost:4200",
     credentials: true,
-    origin: "*"
 }));
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -59,7 +59,7 @@ app.post("/login",async(req,res)=>{
     try{
         console.log(req.body);
         const { userName, password } = req.body;
-        
+        // console.log(userName, password);
         const findUser = await User.findOne(
             {
                 userName: userName
@@ -88,27 +88,30 @@ app.post("/login",async(req,res)=>{
 
 // app.get("/weather", cookiesMiddleware, weather);
 
-app.post("/weather", cookiesMiddleware, async(req,res)=>{
-    console.log(req);
-    try{
+app.post("/weather",cookiesMiddleware ,async (req, res) => {
+    try {
         const { city } = req.body;
         console.log("city: ", city);
         const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`;
         const options = {
-                method: 'GET',
-                headers: {
-                'X-RapidAPI-Key': '30b75c3bdbmsh10ab4b5aa3dbcd9p1583dcjsnd225eafef772',
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '3bed9c98a2msh13d424f1559fc3ap120835jsnc94bf3043cbd',
                 'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
             }
         };
-        const response = await fetch(url,options);
-        console.log(response);
-        res.status(200).send({msg:"Weather Data", result: await response.json()});
-    }catch(err){
+        const response = await fetch(url, options);
+        
+        // Set cookies in the response
+        // res.cookie('exampleCookie', 'exampleValue', { maxAge: 900000, httpOnly: true });
+        // res.cookie('anotherCookie', 'anotherValue', { maxAge: 900000, httpOnly: true });
+        res.status(200).send({ msg: "Weather Data", result: await response.json()});
+    } catch (err) {
         console.log(err);
-        res.status(500).send({msg:"Internal Server Error"});
+        res.status(500).send({ msg: "Internal Server Error" });
     }
 });
+
 
 app.listen(PORT,()=>{
     console.log(`Listning to port ${PORT}`);
