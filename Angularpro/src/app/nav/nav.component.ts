@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-onRouterLinkActive($event: Event) {
-throw new Error('Method not implemented.');
-}
+  onRouterLinkActive($event: Event) {
+    throw new Error('Method not implemented.');
+  }
 
 }

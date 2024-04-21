@@ -17,7 +17,7 @@
         <div class="user_options-forms" id="user_options-forms">
             <div class="user_forms-login">
                 <h2 class="forms_title">Login</h2>
-                <form class="forms_form" (submit)="login($event)"> <!---->
+                <form class="forms_form" (submit)="login($event)">
                     <fieldset class="forms_fieldset">
                         <div class="forms_field">
                             <input type="text" placeholder="Name" class="forms_field-input" id="login-username" required
@@ -35,7 +35,7 @@
             </div>
             <div class="user_forms-signup">
                 <h2 class="forms_title">Sign Up</h2>
-                <form class="forms_form" (submit)="signUp($event)"> <!---->
+                <form class="forms_form" (submit)="signUp($event)">
                     <fieldset class="forms_fieldset">
                         <div class="forms_field">
                             <input type="text" placeholder="Full Name" class="forms_field-input" id="signup-username"
@@ -96,7 +96,7 @@
     </nav>
     <div class="container mt-5 mb-5">
         <main>
-            <h1 class="text-center mb-5 fw-bold">Weather of {{city}}</h1><!---->
+            <h1 class="text-center mb-5 fw-bold">Weather of {{city}}</h1>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow border-primary">
@@ -108,11 +108,9 @@
                                     class="text-body-secondary fw-light"><span>&#8451;</span></small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>Temperature : <span id="Temp_temp"> ...</span></li>
-                                <!-- <li>Humidity : <span id="Temp_hum"> ...</span></li> -->
                                 <li>Min Temperature : <span id="Temp_minTemp"> ...</span></li>
                                 <li>Max Tempearture : <span id="Temp_maxTemp"> ...</span></li>
                             </ul>
-                            <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
                         </div>
                     </div>
                 </div>
@@ -129,7 +127,6 @@
                                 <li>Feels_like : <span id="hi_fl">...</span></li>
                                 <li>Humidity : <span id="hi_hu">...</span></li>
                             </ul>
-                            <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
                         </div>
                     </div>
                 </div>
@@ -147,7 +144,6 @@
                                 <li>Sunrise Time : <span id="wi_srt">...</span></li>
                                 <li>Sunset Time : <span id="wi_sst">...</span></li>
                             </ul>
-                            <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
                         </div>
                     </div>
                 </div>
@@ -176,107 +172,47 @@
                         <tr>
                             <th scope="row" class="text-start city" id="cityName">Manali</th>
                             <td>
-                                <!-- <svg class="bi text-success cloud_pct" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success feels_like" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success humidity" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success min_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success max_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_speed" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success wind_degrees" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success sunrise" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunset" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row" class="text-start city" id="cityName">Chandigarh</th>
                             <td>
-                                <!-- <svg class="bi text-success cloud_pct" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success feels_like" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success humidity" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success min_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!-- <svg class="bi text-success max_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success wind_speed" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_degrees" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
-                            <td> 
-                                <!--<svg class="bi text-success sunrise" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            <td>
                             </td>
-                            <td> 
-                                <!--<svg class="bi text-success sunset" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                     </tbody>
@@ -284,213 +220,93 @@
                         <tr>
                             <th scope="row" class="text-start city" id="cityName">Pune</th>
                             <td>
-                                <!-- <svg class="bi text-success cloud_pct" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success feels_like" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success humidity" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success min_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!-- <svg class="bi text-success max_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_speed" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_degrees" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunrise" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunset" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            </td>
+                            <td>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row" class="text-start city" id="cityName">Kohima</th>
                             <td>
-                                <!-- <svg class="bi text-success cloud_pct" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success feels_like" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success humidity" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success min_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!-- <svg class="bi text-success max_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_speed" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success wind_degrees" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunrise" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunset" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row" class="text-start city" id="cityName">Jaipur</th>
                             <td>
-                                <!-- <svg class="bi text-success cloud_pct" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success feels_like" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success humidity" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success min_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success max_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_speed" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success wind_degrees" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success sunrise" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunset" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row" class="text-start city" id="cityName">Kolkata</th>
                             <td>
-                                <!-- <svg class="bi text-success cloud_pct" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success feels_like" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success humidity" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success min_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!-- <svg class="bi text-success max_temp" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success wind_speed" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success wind_degrees" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
-                            </td>
-                            <td> 
-                                <!--<svg class="bi text-success sunrise" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
                             </td>
                             <td>
-                                <!--<svg class="bi text-success sunset" width="24" height="24">
-                                    <use xlink:href="#check"></use>
-                                </svg> -->
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                     </tbody>

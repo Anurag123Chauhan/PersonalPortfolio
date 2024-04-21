@@ -4,15 +4,15 @@ import { ProjectCardComponent } from "../project-card/project-card.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-portfolio',
-    standalone: true,
-    templateUrl: './portfolio.component.html',
-    styleUrl: './portfolio.component.css',
-    imports: [ProjectCardComponent,CommonModule]
+  selector: 'app-portfolio',
+  standalone: true,
+  templateUrl: './portfolio.component.html',
+  styleUrl: './portfolio.component.css',
+  imports: [ProjectCardComponent, CommonModule]
 })
 export class PortfolioComponent {
-  constructor(private titleService: Title){
-    
+  constructor(private titleService: Title) {
+
     this.titleService.setTitle('Anurag Chauhan - Portfolio');
   }
   // pr:{name: String, summary: String}={

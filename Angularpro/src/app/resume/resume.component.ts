@@ -9,15 +9,15 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './resume.component.css'
 })
 export class ResumeComponent {
-  constructor(private titleService: Title, private renderer: Renderer2){
+  constructor(private titleService: Title, private renderer: Renderer2) {
     this.titleService.setTitle('Anurag Chauhan - Resume');
   }
 
-  DownloadFile(){
+  DownloadFile() {
     const link = this.renderer.createElement('a');
-    link.setAttribute('target','_blank');
-    link.setAttribute('href','../../assets/..pdf');
-    link.setAttribute('download','Resume.pdf');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', '../../assets/..pdf');
+    link.setAttribute('download', 'Resume.pdf');
     link.click();
     link.remove();
   }
