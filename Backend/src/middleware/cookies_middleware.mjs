@@ -5,7 +5,7 @@ const cookiesMiddleware = async(req,res,next) => {
     
     const token = req.cookies.token;
     console.log("token: ", req.cookies);
-    if (token) {
+    if (token) { 
         try{
             const decoded = jwt.verify(token, process.env.USER_SECRET_KEY);
             const user = await User.findOne({username: decoded.username,password: decoded.password});

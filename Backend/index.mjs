@@ -24,10 +24,11 @@ connectDB();
 
 app.get("/",(req,res)=>{
     res.status(200).send("Hello World");
+    res.json({msg:"Hello World"});
 });
 
 app.post("/register",async(req,res)=>{
-    try{
+    try{ 
         const { userName, password } = req.body;
         console.log("user: ", userName, "password: ", password);
         const existingUser = await User.findOne(
@@ -85,9 +86,6 @@ app.post("/login",async(req,res)=>{
         res.status(500).send({msg:"Internal Server Error"});
     }
 });
-
-// app.get("/weather", cookiesMiddleware, weather);
-
 app.post("/weather",cookiesMiddleware ,async (req, res) => {
     try {
         const { city } = req.body;
@@ -111,8 +109,6 @@ app.post("/weather",cookiesMiddleware ,async (req, res) => {
         res.status(500).send({ msg: "Internal Server Error" });
     }
 });
-
-
 app.listen(PORT,()=>{
     console.log(`Listning to port ${PORT}`);
 });
